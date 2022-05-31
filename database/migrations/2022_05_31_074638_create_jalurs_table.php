@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama');
             $table->boolean('status');
+            $table->integer('kuota');
             $table->timestamps();
         });
     }

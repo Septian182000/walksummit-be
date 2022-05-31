@@ -19,6 +19,7 @@ class JalurFactory extends Factory
         return [
             'nama' => $this->faker->name,
             'status' => $this->faker->boolean,
+            'kuota' => 500,
         ];
     }
 }
