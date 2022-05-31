@@ -13,14 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('grups', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('jalur_id');
-            $table->boolean('status')->default(false);
-            $table->date('tgl_brangkat');
-            $table->date('tgl_pulang');
-            $table->boolean('checkout')->default(true);
-            $table->timestamps();
+        Schema::table('pelanggans', function (Blueprint $table) {
+            $table->foreign('grup_id')->references('id')->on('grups')->onDelete('cascade');
+        });
+
+        Schema::table('grups', function (Blueprint $table) {
+            $table->foreign('jalur_id')->references('id')->on('jalurs')->onDelete('cascade');
         });
     }
 
@@ -31,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('grups');
+        //
     }
 };

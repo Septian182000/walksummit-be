@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('pelanggans', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_grup');
+            $table->unsignedBigInteger('grup_id');
             $table->string('nik', 16);
             $table->string('nama');
             $table->string('alamat');

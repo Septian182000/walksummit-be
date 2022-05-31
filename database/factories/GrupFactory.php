@@ -17,11 +17,11 @@ class GrupFactory extends Factory
     public function definition()
     {
         return [
+            'jalur_id' => $this->faker->numberBetween(1, 10),
             'status' => $this->faker->boolean,
             'tgl_brangkat' => $this->faker->date,
             'tgl_pulang' => $this->faker->date,
-            'checkout' => $this->faker->boolean,
-            'id_jalur' => $this->faker->numberBetween(1,10)
+            'checkout' => $this->faker->boolean
         ];
     }
 }

@@ -17,7 +17,7 @@ class PelangganFactory extends Factory
     public function definition()
     {
         return [
-            'id_grup' => $this->faker->numberBetween(1, 10),
+            'grup_id' => $this->faker->numberBetween(1, 10),
             'nik' => 1111111111111111,
             'nama' => $this->faker->name,
             'alamat' => $this->faker->address,
