@@ -1,8 +1,7 @@
 ## Endpoints
 
 * Get informasi gunung : ``` GET api/informasi-gunung ```
-
-### Output
+Output :
 ``` 
 {
   "message": "Informasi Gunung",
