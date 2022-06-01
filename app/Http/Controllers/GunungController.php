@@ -31,7 +31,7 @@ class GunungController extends Controller
         }
 
         $response = [
-            'message' => 'Informasi Gunung',
+            'message' => 'informasi gunung',
             'data' => [
                 'jumlah_pendaki' => $jumlahPendaki,
                 'kuota_maksimal' => $jumlahKuota,
