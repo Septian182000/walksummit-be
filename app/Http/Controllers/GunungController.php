@@ -22,13 +22,20 @@ class GunungController extends Controller
             ->groupBy('grups.jalur_id')
             ->get();
 
+        for ($i = 0; $i < count($kuotaTiapJalur); $i++) {
+            foreach ($jumlahPendakiTiapJalur as $jumlah) {
+                if ($jumlah->jalur_id == $kuotaTiapJalur[$i]->id) {
+                    $kuotaTiapJalur[$i]['kuota'] = $kuotaTiapJalur[$i]['kuota'] - $jumlah->jumlah;
+                }
+            }
+        }
+
         $response = [
             'message' => 'Informasi Gunung',
             'data' => [
                 'jumlah_pendaki' => $jumlahPendaki,
                 'kuota_maksimal' => $jumlahKuota,
                 'sisa_kuota' => $sisaKuota,
-                'jumlah_pendaki_tiap_jalur' => $jumlahPendakiTiapJalur,
                 'kuota_tiap_jalur' => $kuotaTiapJalur
             ]
         ];
