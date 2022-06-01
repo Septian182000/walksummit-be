@@ -28,3 +28,22 @@
   }
 }
 ```
+
+* Cari grup : ``` Get api/cari-grub ```
+```
+// ketika grup ditemukan
+{
+    "message": "grup ditemukan",
+    "data": {
+        "id": 1,
+        "koordinator": "Dr. Arlie Hirthe Sr.",
+        "status": 0,
+        "jalur": "Miller Brown MD"
+    }
+}
+
+// ketika grup tidak ditemukan 
+{
+    "message": "grup tidak ditemukan"
+}
+```
