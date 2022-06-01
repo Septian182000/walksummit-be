@@ -19,7 +19,6 @@ return new class extends Migration
             $table->boolean('status')->default(false);
             $table->date('tgl_brangkat');
             $table->date('tgl_pulang');
-            $table->boolean('checkout')->default(true);
             $table->timestamps();
         });
     }

@@ -15,6 +15,6 @@ class JalurTableSeeder extends Seeder
      */
     public function run()
     {
-        Jalur::factory(10)->create();
+        Jalur::factory(5)->create();
     }
 }

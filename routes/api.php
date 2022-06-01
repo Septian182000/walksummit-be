@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GunungController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HelloController;
@@ -22,4 +23,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::controller(HelloController::class)->group(function () {
     Route::get('/greeting', 'index');
+});
+
+Route::controller(GunungController::class)->group(function () {
+    Route::get('/informasi-gunung', 'getInformasiGunung');
 });

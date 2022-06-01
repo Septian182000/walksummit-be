@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('alamat');
             $table->string('no_telp', 16);
             $table->string('no_telp_orgtua', 16);
+            $table->boolean('checkout')->default(true);
             $table->enum('jenis_kelamin', ['L', 'P']);
             $table->timestamps();
         });

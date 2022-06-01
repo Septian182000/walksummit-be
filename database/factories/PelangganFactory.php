@@ -23,6 +23,7 @@ class PelangganFactory extends Factory
             'alamat' => $this->faker->address,
             'no_telp' => $this->faker->e164PhoneNumber,
             'no_telp_orgtua' => $this->faker->e164PhoneNumber,
+            'checkout' => $this->faker->boolean,
             'jenis_kelamin' => 'L'
         ];
     }
