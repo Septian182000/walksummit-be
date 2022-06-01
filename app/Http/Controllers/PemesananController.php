@@ -8,9 +8,9 @@ use Illuminate\Http\Response;
 
 class PemesananController extends Controller
 {
-    public function cariGrub(Request $request)
+    public function cariGrub()
     {
-        $idGrup = $request->input('idGrub');
+        $idGrup = request('idGrup');
         $grup = Grup::join('jalurs', 'grups.jalur_id', '=', 'jalurs.id')
             ->join('pelanggans', 'grups.id', '=', 'pelanggans.grup_id')
             ->select('grups.id', 'pelanggans.nama as koordinator', 'grups.status', 'jalurs.nama as jalur')
