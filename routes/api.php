@@ -1,9 +1,11 @@
 <?php
 
-use App\Http\Controllers\GunungController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\HelloController;
+use App\Http\Controllers\GunungController;
+use App\Http\Controllers\PemesananController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,4 +29,8 @@ Route::controller(HelloController::class)->group(function () {
 
 Route::controller(GunungController::class)->group(function () {
     Route::get('/informasi-gunung', 'getInformasiGunung');
+});
+
+Route::controller(PemesananController::class)->group(function () {
+    Route::get('/cari-grub', 'cariGrub');
 });
