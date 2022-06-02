@@ -32,5 +32,5 @@ Route::controller(GunungController::class)->group(function () {
 });
 
 Route::controller(PemesananController::class)->group(function () {
-    Route::get('/cari-grub', 'cariGrub');
+    Route::get('/cari-grub/{id}', 'cariGrub');
 });
