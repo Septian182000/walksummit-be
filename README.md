@@ -29,7 +29,7 @@
 }
 ```
 
-* Cari grup : ``` Get api/cari-grub ```
+* Cari grup : ``` Get api/cari-grub/{id} ```
 ```
 // ketika grup ditemukan
 {
