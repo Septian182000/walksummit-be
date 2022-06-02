@@ -76,7 +76,7 @@
 
 * Detail grup : ``` Get api/detail-grup/{id} ```
 ```
-// ketika grup ditemukan
+// ketika detail grup ditemukan
 {
     "message": "grup ditemukan",
     "data": {
