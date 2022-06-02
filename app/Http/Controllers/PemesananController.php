@@ -12,8 +12,12 @@ class PemesananController extends Controller
     public function listGroup()
     {
         $grup = Grup::all();
+        $response = [
+            'message' => 'list grup',
+            'data' => $grup
+        ];
 
-        return response()->json($grup, Response::HTTP_OK);
+        return response()->json($response, Response::HTTP_OK);
     }
 
     public function cariGrup($id)
