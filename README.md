@@ -47,3 +47,28 @@
     "message": "grup tidak ditemukan"
 }
 ```
+
+* Cari pelanggan : ``` Get api/cari-pelanggan/{id} ```
+```
+// ketika pelanggan ditemukan 
+{
+    "message": "pelanggan ditemukan",
+    "data": {
+        "id": 2,
+        "grup_id": 6,
+        "nik": "1111111111111111",
+        "nama": "Mrs. Daphne Tromp",
+        "alamat": "16210 Buckridge Row Apt. 342\nNickolasmouth, LA 45912-5139",
+        "no_telp": "+13645203096",
+        "no_telp_orgtua": "+13642281079",
+        "checkout": 0,
+        "jenis_kelamin": "L",
+        "created_at": "2022-06-01T08:22:48.000000Z",
+        "updated_at": "2022-06-01T08:22:48.000000Z"
+    }
+}
+
+// ketika pelanggan tidak ditemukan
+{
+    "message": "pelanggan tidak ditemukan"
+}
