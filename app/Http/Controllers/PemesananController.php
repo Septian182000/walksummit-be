@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Grup;
+use App\Models\Pelanggan;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -27,6 +28,26 @@ class PemesananController extends Controller
         $response = [
             'message' => 'grup ditemukan',
             'data' => $grup
+        ];
+
+        return response()->json($response, Response::HTTP_OK);
+    }
+
+    public function cariPelanggan($id)
+    {
+        $pelanggan = Pelanggan::where('id', $id)->first();
+
+        if (!$pelanggan) {
+            $response = [
+                'message' => 'pelanggan tidak ditemukan',
+            ];
+
+            return response()->json($response, Response::HTTP_NOT_FOUND);
+        }
+
+        $response = [
+            'message' => 'pelanggan ditemukan',
+            'data' => $pelanggan
         ];
 
         return response()->json($response, Response::HTTP_OK);
