@@ -72,3 +72,35 @@
 {
     "message": "pelanggan tidak ditemukan"
 }
+```
+
+* Detail grup : ``` Get api/detail-grup/{id} ```
+```
+// ketika grup ditemukan
+{
+    "message": "grup ditemukan",
+    "data": {
+        "id": "4",
+        "pelanggan": [
+            {
+                "id": 1,
+                "grup_id": 4,
+                "nik": "1111111111111111",
+                "nama": "Prof. Gia Nicolas",
+                "alamat": "98692 Marta Roads Apt. 935\nLake Brandystad, NV 57698-2500",
+                "no_telp": "+16674150864",
+                "no_telp_orgtua": "+13464612673",
+                "checkout": 0,
+                "jenis_kelamin": "L",
+                "created_at": "2022-06-01T08:22:48.000000Z",
+                "updated_at": "2022-06-01T08:22:48.000000Z"
+            }
+        ]
+    }
+}
+
+// ketika detail grup tidak ditemukan 
+{
+    "message": "grup tidak ditemukan"
+}
+```
