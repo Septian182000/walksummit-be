@@ -9,6 +9,13 @@ use Illuminate\Http\Response;
 
 class PemesananController extends Controller
 {
+    public function listGroup()
+    {
+        $grup = Grup::all();
+
+        return response()->json($grup, Response::HTTP_OK);
+    }
+
     public function cariGrup($id)
     {
         $grup = Grup::join('jalurs', 'grups.jalur_id', '=', 'jalurs.id')
