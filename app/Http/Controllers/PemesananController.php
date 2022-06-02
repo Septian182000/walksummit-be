@@ -9,7 +9,7 @@ use Illuminate\Http\Response;
 
 class PemesananController extends Controller
 {
-    public function cariGrub($id)
+    public function cariGrup($id)
     {
         $grup = Grup::join('jalurs', 'grups.jalur_id', '=', 'jalurs.id')
             ->join('pelanggans', 'grups.id', '=', 'pelanggans.grup_id')
@@ -48,6 +48,28 @@ class PemesananController extends Controller
         $response = [
             'message' => 'pelanggan ditemukan',
             'data' => $pelanggan
+        ];
+
+        return response()->json($response, Response::HTTP_OK);
+    }
+
+    public function detailGrup($id)
+    {
+        $pelanggan = Pelanggan::where('grup_id', $id)->get();
+        if (count($pelanggan) < 1) {
+            $response = [
+                'message' => 'grup tidak ditemukan',
+            ];
+
+            return response()->json($response, Response::HTTP_NOT_FOUND);
+        }
+
+        $response = [
+            'message' => 'grup ditemukan',
+            'data' => [
+                'id' => $id,
+                'pelanggan' => $pelanggan
+            ]
         ];
 
         return response()->json($response, Response::HTTP_OK);
