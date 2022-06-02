@@ -1,5 +1,23 @@
 ## Endpoints
 
+* List grup : ``` Get api/list-group ```
+```
+{
+    "message": "list grup",
+    "data": [
+        {
+            "id": 1,
+            "jalur_id": 4,
+            "status": 0,
+            "tgl_brangkat": "2015-04-08",
+            "tgl_pulang": "1985-07-18",
+            "created_at": "2022-06-01T08:22:48.000000Z",
+            "updated_at": "2022-06-01T08:22:48.000000Z"
+        }
+    ]
+}
+```
+
 * Get informasi gunung : ``` GET api/informasi-gunung ```
 ``` 
 {
