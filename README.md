@@ -122,3 +122,57 @@
     "message": "grup tidak ditemukan"
 }
 ```
+
+* Tambah grup : ``` POST /api/tambah-grup ```
+```
+{
+    "jalur_id": int,
+    "tgl_brangkat": date,
+    "tgl_pulang": date
+}
+
+Output : 
+
+{
+    "message": "grup berhasil dibuat",
+    "data": {
+        "jalur_id": "2",
+        "status": 0,
+        "tgl_brangkat": "2009-07-14",
+        "tgl_pulang": "2009-07-14",
+        "updated_at": "2022-06-03T09:08:15.000000Z",
+        "created_at": "2022-06-03T09:08:15.000000Z",
+        "id": 13
+    }
+}
+```
+
+* Tambah pelanggan : ``` POST /api/tambah-pelanggan ```
+```
+{
+    "grup_id": int,
+    "nik": string|16,
+    "nama": string,
+    "alamat": string,
+    "no_telp": string|16,
+    "no_telp_orgtua": string|16,
+    "jenis_kelamin": enum(L, P)
+}
+```
+
+* Ubah pelanggan : ``` PUT /api/ubah-pelanggan/{id} ```
+```
+{
+    "grup_id": int,
+    "nik": string|16,
+    "nama": string,
+    "alamat": string,
+    "no_telp": string|16,
+    "no_telp_orgtua": string|16,
+    "checkout": boolean(0, 1),
+    "jenis_kelamin": enum(L, P)
+}
+```
+
+* Hapus pelanggan : ``` DELETE /api/hapus-pelanggan/{id} ```
+* Hapus grup : ``` DELETE /api/hapus-grup/{id} ```
