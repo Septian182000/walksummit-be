@@ -36,4 +36,12 @@ Route::controller(PemesananController::class)->group(function () {
     Route::get('/cari-grup/{id}', 'cariGrup');
     Route::get('/detail-grup/{id}', 'detailGrup');
     Route::get('/cari-pelanggan/{id}', 'cariPelanggan');
+
+    Route::post('/tambah-grup', 'storeGrup');
+    Route::post('/tambah-pelanggan', 'storePelanggan');
+
+    Route::put('/ubah-pelanggan/{id}', 'updatePelanggan');
+
+    Route::delete('/hapus-pelanggan/{id}', 'deletePelanggan');
+    Route::delete('/hapus-grup/{id}', 'deleteGrup');
 });
