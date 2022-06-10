@@ -23,7 +23,7 @@
                         </div>
                         <div class="card-body">
                             @if (session('error'))
-                            <div class="alert alert-danger" style="color: white;" role="alert">
+                            <div class="alert alert-danger" style="color: white; text-align: center;" role="alert">
                                 <strong>Oops !</strong> {{ session('error') }}
                             </div>
                             @endif
