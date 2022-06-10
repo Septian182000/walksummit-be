@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\JalurController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,3 +24,7 @@ Route::controller(AuthController::class)->group(function () {
     Route::post('/login', 'login')->name('login.action');
     Route::post('/logout', 'logout')->name('logout');
 });
+
+
+Route::resource('jalur', JalurController::class)->middleware('auth');
+Route::get('/jalur/{id}/status', [JalurController::class, 'updateStatus'])->name('jalur.status')->middleware('auth');
