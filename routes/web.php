@@ -36,7 +36,10 @@ Route::controller(GrupController::class)->group(function () {
 });
 
 Route::controller(PendakiController::class)->group(function () {
+    Route::get('/pendaki', 'index')->middleware('auth')->name('pendaki.index');
+    Route::get('/pendaki/cari', 'cari')->middleware('auth')->name('pendaki.cari');
     Route::get('/pendaki/{id}/edit', 'edit')->middleware('auth')->name('pendaki.edit');
+    Route::get('/pendaki/{id}/checkout', 'checkout')->middleware('auth')->name('pendaki.checkout');
     Route::put('/pendaki/{id}', 'update')->middleware('auth')->name('pendaki.update');
     Route::delete('/pendaki/{id}', 'destroy')->middleware('auth')->name('pendaki.destroy');
 });
