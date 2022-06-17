@@ -7,6 +7,37 @@ use Illuminate\Http\Request;
 
 class PendakiController extends Controller
 {
+    public function index()
+    {
+        $pendaki = Pelanggan::orderBy('id', 'desc')->paginate(10);
+
+        return view('pages.pendaki.index')->with([
+            'pendaki' => $pendaki,
+        ]);
+    }
+
+    public function checkout($id)
+    {
+        $pendaki = Pelanggan::findOrFail($id);
+        $checkout = $pendaki->checkout == 1 ? 0 : 1;
+
+        Pelanggan::where('id', $id)->update([
+            'checkout' => $checkout,
+        ]);
+
+        return back();
+    }
+
+    public function cari(Request $request)
+    {
+        $nama = $request->nama;
+        $pendaki = Pelanggan::where('nama', 'like', "%$nama%")->paginate(10)->withQueryString();
+
+        return view('pages.pendaki.index')->with([
+            'pendaki' => $pendaki,
+        ]);
+    }
+
     public function destroy($id)
     {
         Pelanggan::destroy($id);
