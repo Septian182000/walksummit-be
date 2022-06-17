@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\JalurController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GrupController;
 use App\Http\Controllers\PendakiController;
 use Illuminate\Support\Facades\Route;
@@ -18,9 +19,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.dashboard');
-})->middleware('auth')->name('dashboard');
+Route::get('/', [DashboardController::class, 'index'])->middleware('auth')->name('dashboard');
 
 Route::controller(AuthController::class)->group(function () {
     Route::get('/login', 'index')->name('login');
