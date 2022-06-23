@@ -54,6 +54,8 @@
                 <table class="table align-items-center mb-0">
                     <thead>
                         <tr>
+                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                ID</th>
                             <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nama</th>
                             <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                 status</th>
@@ -67,6 +69,7 @@
                     <tbody>
                         @foreach ($jalur as $item)
                         <tr>
+                            <td class="text-center"> {{ $item->id }}</td>
                             <td> {{ $item->nama }}</td>
                             <td class="align-middle text-center text-sm">
                                 @if ($item->status == 1)
