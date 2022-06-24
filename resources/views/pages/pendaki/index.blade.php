@@ -75,7 +75,9 @@
                         <tr>
                             <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                 id </th>
-                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                            <th class="text-center text-secondary text-xxs font-weight-bolder opacity-7">
+                                Telp Orang Tua</th>
+                            <th class="text-center text-secondary text-xxs font-weight-bolder opacity-7">
                                 nama</th>
                             <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                 status</th>
@@ -85,7 +87,8 @@
                         @foreach ($pendaki as $item)
                         <tr>
                             <td class="text-center"> {{ $item->nik }}</td>
-                            <td> {{ $item->nama }}</td>
+                            <td class="text-center"> {{ $item->no_telp_orgtua }}</td>
+                            <td class="text-center"> {{ $item->nama }}</td>
                             <td class="text-center text-sm">
                                 @if ($item->checkout == 1)
                                 <a href="{{ route('pendaki.checkout', $item->id) }}"

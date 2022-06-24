@@ -5,6 +5,8 @@
                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                     id</th>
                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                    Tanggal Berangkat</th>
+                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                     status</th>
                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                     action
@@ -15,6 +17,7 @@
             @foreach ($grup as $item)
             <tr>
                 <td class="text-center"> {{ $item->id }}</td>
+                <td class="text-center"> {{ $item->tgl_brangkat }}</td>
                 <td class="align-middle text-center text-sm">
                     @if ($item->status == 1)
                     <a href="{{ route('grup.status', $item->id) }}" class="badge bg-gradient-success">Sudah
