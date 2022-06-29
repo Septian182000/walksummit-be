@@ -24,7 +24,7 @@
                         <div class="card-body">
                             @if (session('error'))
                             <div class="alert alert-danger" style="color: white; text-align: center;" role="alert">
-                                <strong>Oops !</strong> {{ session('error') }}
+                                <strong>Oops !</strong> Wrong Username or Password
                             </div>
                             @endif
                             <form method="POST" action="{{ route('login.action') }}" role="form text-left">
