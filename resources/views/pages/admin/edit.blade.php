@@ -14,7 +14,7 @@
                     </li>
                     <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Tambah admin</li>
                 </ol>
-                <h6 class="font-weight-bolder mb-0">Tambah admin</h6>
+                <h6 class="font-weight-bolder mb-0">Edit admin</h6>
             </nav>
             <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
                 <div class="ms-md-auto pe-md-3 d-flex align-items-center">

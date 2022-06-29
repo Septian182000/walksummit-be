@@ -4,12 +4,12 @@
 <main class="main-content  mt-0">
     <section class="min-vh-100 mb-8">
         <div class="page-header align-items-start min-vh-50 pt-5 pb-11 m-3 border-radius-lg"
-            style="background-image: url('{{ asset('assets/img/curved-images/curved14.jpg') }}');">
+            style="background-image: url('{{ asset('assets/img/curved-images/sindoro.jpg') }}');">
             <span class="mask bg-gradient-dark opacity-6"></span>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-5 text-center mx-auto">
-                        <h1 class="text-white mb-2 mt-5">Welcome !</h1>
+                        <h1 class="text-white mb-2 mt-5">BASECAMP SINDORO</h1>
                     </div>
                 </div>
             </div>
@@ -24,7 +24,7 @@
                         <div class="card-body">
                             @if (session('error'))
                             <div class="alert alert-danger" style="color: white; text-align: center;" role="alert">
-                                <strong>Oops !</strong> {{ session('error') }}
+                                <strong>Oops !</strong> Wrong Username or Password
                             </div>
                             @endif
                             <form method="POST" action="{{ route('login.action') }}" role="form text-left">
